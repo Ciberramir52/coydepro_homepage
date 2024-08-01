@@ -1,11 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="./Assets/COYDEPRO.svg">
     <title>Coydepro</title>
 </head>
+
 <body>
+    <nav class="navbar">
+        <a href="#" class="navbar-logo">
+            <img src="./Assets/COYDEPRO.svg" alt="Logo" class="logo">
+            <span class="title">COYDEPRO</span>
+        </a>
+        <ul class="navbar-menu">
+            <li><a href="#">INICIO</a></li>
+            <li><a href="#">EMPRESA</a></li>
+            <li><a href="#">SERVICIOS</a></li>
+            <li><a href="#">CLIENTES</a></li>
+            <li><a href="#">CONTACTO</a></li>
+        </ul>
+    </nav>
+    <div class="carousel-container">
+        <div class="carousel">
+            <div class="carousel-item" style="background-image: url('./Assets/images/consultoria.jpg');">
+                <div class="content">
+                    <h2>Consultoría</h2>
+                    <hr>
+                    <p>Nuestros Consultores le ayudaran a desarrollar las estrategias de mejora mas eficaces para su
+                        negocio o empresa, mediante un diagnostico personalizado, planes de accion adecuados a sus
+                        necesidades y la supervision continua del cumplimiento de los objetivos.</p>
+                    <button>Mas informacion</button>
+                </div>
+            </div>
+            <div class="carousel-item" style="background-image: url('./Assets/images/sistemasdecalidad.jpg');">
+                <div class="content">
+                    <h2>Sistemas de calidad</h2>
+                    <hr>
+                    <p>Nuestra experiencia en sistemas de calidad nos permite desarrollar para Usted las propuestas de
+                        mejora continua que lo llevaran a alcanzar la excelencia en la Gestion de sus procesos, el logro
+                        de sus objetivos de calidad y organizacionales.</p>
+                    <button>Mas informacion</button>
+                </div>
+            </div>
+            <div class="carousel-item" style="background-image: url('./Assets/images/capacitacion.jpg');">
+                <div class="content">
+                    <h2>Capacitacion</h2>
+                    <hr>
+                    <p>Contamos con los mejores contenidos en nuestro catalogo de cursos que le ayudaran a cumplir con
+                        los requerimientos de sus planes internos de formacion y entrenamiento para lograr la excelencia
+                        operacional de sus colaboradores. Nuestros programas estan avalados por la STPS.</p>
+                    <button>Mas informacion</button>
+                </div>
+            </div>
+            <div class="carousel-item" style="background-image: url('./Assets/images/mejoracontinua.jpg');">
+                <div class="content">
+                    <h2>Mejora continua</h2>
+                    <hr>
+                    <p>Utilizamos las tecnicas mas apropiadas para ofrecerle las propuestas de mejora adecuadas para las
+                        areas y procesos de su organizacion, a manera de obtener el maximo de los recursos, tanto
+                        humanos, materiales y tecnologicos existentes; asi como las adecuaciones internas necesarias.
+                    </p>
+                    <button>Mas informacion</button>
+                </div>
+            </div>
+            <div class="carousel-item" style="background-image: url('./Assets/images/disenio.jpg');">
+                <div class="content">
+                    <h2>Diseño</h2>
+                    <hr>
+                    <p>Contamos con la experiencia y las herramientas de diseño que le ayudaran de manera integral a resolver sus necesidades en desarrollo de prototipos, nuevos productos, modificacion de diseños, planos de fabricacion y procesos relacionados con la produccion.</p>
+                    <button>Mas informacion</button>
+                </div>
+            </div>
+            <!-- Add more carousel items as needed -->
+        </div>
+        <button class="carousel-control prev" onclick="prevSlide()">&#10094;</button>
+        <button class="carousel-control next" onclick="nextSlide()">&#10095;</button>
+    </div>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="style.css">
 </body>
+
 </html>
