@@ -1,4 +1,5 @@
-General Reset body,
+/* General Reset */
+body,
 html {
     margin: 0;
     padding: 0;
@@ -13,7 +14,7 @@ html {
 .navbar {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     background-color: #003366;
     height: 90px;
     padding: 0 20px;
@@ -28,6 +29,7 @@ html {
 .navbar-logo {
     display: flex;
     align-items: center;
+    margin-right: auto;
 }
 
 .logo {
@@ -192,6 +194,86 @@ html {
     color: #e6b800;
 }
 
+/* Mission, Vision and Values Style */
+
+main {
+    text-align: center;
+}
+
+section {
+    padding: 75px 0;
+}
+
+section h2 {
+    color: #003366;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+section p,
+section ul {
+    min-width: 300px;
+    width: 60%;
+    margin: 0 auto;
+    margin-top: 50px;
+    font-size: 1.5rem;
+}
+
+section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+section ul li {
+    background-color: #e6b800;
+    color: #e6e6e6;
+    padding: 2rem 0;
+    margin: 0.5rem 0;
+    border-radius: 5px;
+    margin: 40px auto;
+}
+
+/* Footer Style */
+
+footer {
+    background-color: #2f2f2f;
+    color: #e6e6e6;
+    text-align: center;
+    padding: 1rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px -5px 5px rgba(0, 0, 0, 0.2);
+}
+
+.footer-content {
+    padding: 0 20px;
+}
+
+.footer-content:first-child {
+    border-right: 1px solid #e6e6e6;
+}
+
+.footer-content:nth-child(2) {
+    color: #e6b800;
+}
+
+@media (max-width: 1000px) {
+    .title {
+        font-size: 1.6rem;
+    }
+
+    .logo {
+        height: 40px;
+        margin-right: 15px;
+    }
+
+    .navbar-menu li {
+        font-size: 1.1rem;
+        margin-left: 15px;
+    }
+}
+
 /* Show on mobile */
 @media (max-width: 600px) {
     .title {
@@ -245,87 +327,14 @@ html {
     .carousel-item button {
         font-size: 1.2rem;
     }
-}
 
-@media (max-width: 1000px) {
-    .title {
-        font-size: 1.6rem;
+    footer {
+        flex-direction: column;
     }
 
-    .logo {
-        height: 40px;
-        margin-right: 15px;
+    .footer-content:first-child {
+        border: none;
+        padding-bottom: 30px;
+        border-bottom: 1px solid #e6e6e6;
     }
-
-    .navbar-menu li {
-        font-size: 1.1rem;
-        margin-left: 15px;
-    }
-}
-
-/* Mission, Vision and Values Style */
-
-main {
-    text-align: center;
-}
-
-section {
-    padding: 75px 0;
-}
-
-section h2 {
-    color: #003366;
-    margin-bottom: 1rem;
-    font-size: 2rem;
-}
-
-section p,
-section ul {
-    min-width: 300px;
-    width: 60%;
-    margin: 0 auto;
-    margin-top: 50px;
-    font-size: 1.5rem;
-}
-
-section ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-section ul li {
-    background-color: #e6b800;
-    color: #e6e6e6;
-    padding: 2rem 0;
-    margin: 0.5rem 0;
-    border-radius: 5px;
-    margin: 40px auto;
-}
-
-/* Footer Style */
-
-footer {
-    background-color: #2f2f2f;
-    color: #e6e6e6;
-    text-align: center;
-    padding: 1rem 0;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0px -5px 5px rgba(0, 0, 0, 0.2);
-}
-
-.footer-content {
-    padding: 0 20px;
-}
-
-.footer-content:first-child {
-    border-right: 1px solid #e6e6e6;
-}
-
-.footer-content:nth-child(2) {
-    color: #e6b800;
 }
