@@ -1,66 +1,96 @@
-/* General Reset */
-body, html {
+General Reset body,
+html {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    background-color: #f2f2f2;
+    background-color: #e6e6e6;
     height: 100%;
     overflow-x: hidden;
+    color: #2f2f2f;
 }
 
 /* Navbar Style */
 .navbar {
     display: flex;
-    padding: 0 10px;
     align-items: center;
-    justify-content: center;
-    background-color: #003366 ;
+    justify-content: space-between;
+    background-color: #003366;
+    height: 90px;
     padding: 0 20px;
     box-sizing: border-box;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
 }
 
 .navbar-logo {
     display: flex;
     align-items: center;
-    margin-right: auto;
 }
 
 .logo {
-    height: 40px;
-    margin-right: 10px;
+    height: 50px;
+    margin-right: 20px;
 }
 
-.navbar-logo, .navbar-menu a {
-    color: #f2f2f2;
+.navbar-logo,
+.navbar-menu a {
+    color: #e6e6e6;
     text-decoration: none;
-    line-height: 60px;
+    line-height: 90px;
 }
 
 .title {
-    font-size: 16px;
-    line-height: 60px;
+    color: #e6e6e6;
+    font-size: 2rem;
+    font-weight: bold;
+    line-height: 90px;
 }
 
 .navbar-menu {
     list-style: none;
     display: flex;
+    flex-direction: row;
     margin: 0;
     padding: 0;
 }
 
 .navbar-menu li {
-    margin-left: 20px;
+    font-size: 1.4rem;
+    margin-left: 40px;
 }
 
 .navbar-menu a:hover {
     color: #d1d1d1;
 }
 
+/* Mobile Styles */
+.navbar-toggle {
+    display: none;
+    /* Hide the toggle button by default */
+    background: none;
+    border: none;
+    color: #e6e6e6;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 0;
+    line-height: 40px;
+}
+
+.navbar-toggle-icon::before {
+    font-size: 1.5rem;
+    content: "\2630";
+    /* Unicode for hamburger icon */
+}
+
 /* Carousel Style */
 .carousel-container {
     position: relative;
     width: 100%;
-    height: 100vh;
+    min-height: 700px;
+    height: 60vh;
     overflow: hidden;
 }
 
@@ -71,11 +101,17 @@ body, html {
 
 .carousel-item {
     min-width: 100%;
-    height: 100vh;
-    background-size: cover;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
     background-position: center;
+    color: #e6e6e6;
+}
+
+.carousel-item .content-container {
+    min-height: 700px;
+    height: 60vh;
+    background-color: rgba(0, 0, 0, 0.5);
     position: relative;
-    color: #f2f2f2;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -83,32 +119,35 @@ body, html {
 
 .carousel-item .content {
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.5);
-    max-width: 85%;
+    min-width: 250px;
+    max-width: 50%;
     padding: 20px;
     border-radius: 10px;
 }
 
 .carousel-item h2 {
     margin: 0;
-    font-size: 2em;
+    font-size: 3rem;
 }
 
 .carousel-item hr {
-    width: 50%;
-    margin: 10px auto;
-    border: 4px solid #FFCC00;
+    width: 80%;
+    margin: 20px auto;
+    border: 4px solid #e6b800;
+    border-radius: 4px;
 }
 
 .carousel-item p {
     margin: 10px 0;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
 }
 
 .carousel-item button {
     padding: 10px 20px;
-    font-size: 1em;
+    font-size: 1.5rem;
     background-color: #007bff;
-    color: #f2f2f2;
+    color: #e6e6e6;
     border: none;
     cursor: pointer;
     border-radius: 5px;
@@ -118,14 +157,20 @@ body, html {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: #f2f2f2;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: rgb(230, 230, 230, 0.4);
     border: none;
     font-size: 2em;
     cursor: pointer;
-    padding: 10px;
+    padding: 15px;
     border-radius: 50%;
+    text-align: center;
     user-select: none;
+}
+
+.carousel-control:hover {
+    background-color: rgba(0, 0, 0, 0.6);
+    color: rgb(230, 230, 230, 0.8);
 }
 
 .carousel-control.prev {
@@ -134,4 +179,153 @@ body, html {
 
 .carousel-control.next {
     right: 10px;
+}
+
+/* Clients Style */
+
+.clients-container {
+    text-align: center;
+    padding: 20px;
+}
+
+.clients-container h2 {
+    color: #e6b800;
+}
+
+/* Show on mobile */
+@media (max-width: 600px) {
+    .title {
+        font-size: 2rem;
+    }
+
+    .navbar-menu {
+        display: none;
+        /* Hide the menu by default on mobile */
+        flex-direction: column;
+        position: absolute;
+        top: 90px;
+        right: 0;
+        background-color: #14477a;
+        width: 200px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .navbar-toggle {
+        display: block;
+        /* Show the toggle button on mobile */
+    }
+
+    .navbar-menu.show {
+        display: flex;
+        /* Show menu when active */
+    }
+
+    .navbar-menu li {
+        margin: 0;
+        /* Reset margin for list items in mobile view */
+        border-bottom: 1px solid #2f2f2f;
+        /* Optional: add a border between items */
+    }
+
+    .navbar-menu li:last-child {
+        border-bottom: none;
+        /* Remove border from last item */
+    }
+
+    .navbar-menu a {
+        padding: 10px 20px;
+        /* Add padding for links in mobile view */
+    }
+
+    .carousel-item h2 {
+        font-size: 2rem;
+    }
+
+    .carousel-item p,
+    .carousel-item button {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 1000px) {
+    .title {
+        font-size: 1.6rem;
+    }
+
+    .logo {
+        height: 40px;
+        margin-right: 15px;
+    }
+
+    .navbar-menu li {
+        font-size: 1.1rem;
+        margin-left: 15px;
+    }
+}
+
+/* Mission, Vision and Values Style */
+
+main {
+    text-align: center;
+}
+
+section {
+    padding: 75px 0;
+}
+
+section h2 {
+    color: #003366;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+section p,
+section ul {
+    min-width: 300px;
+    width: 60%;
+    margin: 0 auto;
+    margin-top: 50px;
+    font-size: 1.5rem;
+}
+
+section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+section ul li {
+    background-color: #e6b800;
+    color: #e6e6e6;
+    padding: 2rem 0;
+    margin: 0.5rem 0;
+    border-radius: 5px;
+    margin: 40px auto;
+}
+
+/* Footer Style */
+
+footer {
+    background-color: #2f2f2f;
+    color: #e6e6e6;
+    text-align: center;
+    padding: 1rem 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px -5px 5px rgba(0, 0, 0, 0.2);
+}
+
+.footer-content {
+    padding: 0 20px;
+}
+
+.footer-content:first-child {
+    border-right: 1px solid #e6e6e6;
+}
+
+.footer-content:nth-child(2) {
+    color: #e6b800;
 }
